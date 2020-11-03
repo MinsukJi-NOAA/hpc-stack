@@ -4,7 +4,7 @@ set -eux
 
 name="esmf"
 version=${1:-${STACK_esmf_version}}
-
+version="8_0_0"
 software=${name}_$version
 
 # Hyphenated versions used for install prefix
@@ -13,7 +13,7 @@ mpi=$(echo $HPC_MPI | sed 's/\//-/g')
 
 COMPILER=$(echo $compiler | cut -d- -f1)
 MPI=$(echo $mpi | cut -d- -f1)
-
+MPI="mpich"
 [[ $STACK_esmf_enable_pnetcdf =~ [yYtT] ]] && enable_pnetcdf=YES || enable_pnetcdf=NO
 [[ ${STACK_esmf_shared} =~ [yYtT] ]] && enable_shared=YES || enable_shared=NO
 [[ ${STACK_esmf_debug} =~ [yYtT] ]] && enable_debug=YES || enable_debug=NO

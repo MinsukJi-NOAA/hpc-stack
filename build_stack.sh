@@ -131,69 +131,69 @@ $MODULES || { [[ ${STACK_mpi_build:-} =~ [yYtT] ]] && export PATH="$PREFIX/bin:$
 # - should add a check at some point to see if they are already there.
 # this can be done in each script individually
 # it might warrant a --force flag to force rebuild when desired
-build_lib cmake
-build_lib udunits
-build_lib jpeg
-build_lib zlib
-build_lib png
-build_lib szip
-build_lib jasper
+#build_lib cmake
+#build_lib udunits
+#build_lib jpeg
+#build_lib zlib
+#build_lib png
+#build_lib szip
+#build_lib jasper
 
 #----------------------
 # MPI-dependent
 # These must be rebuilt for each MPI implementation
-build_lib hdf5
-build_lib pnetcdf
-build_lib netcdf
-build_lib nccmp
-build_lib nco
-build_lib pio
+#build_lib hdf5
+#build_lib pnetcdf
+#build_lib netcdf
+#build_lib nccmp
+#build_lib nco
+#build_lib pio
 
 # UFS 3rd party dependencies
 
 build_lib esmf
-build_lib fms
+#build_lib fms
 
 # NCEPlibs
 
-build_nceplib bacio
-build_nceplib sigio
-build_nceplib sfcio
-build_nceplib gfsio
-build_nceplib w3nco
-build_nceplib sp
-build_nceplib ip
-build_nceplib ip2
-build_nceplib landsfcutil
-build_nceplib nemsio
-build_nceplib nemsiogfs
-build_nceplib w3emc
-build_nceplib g2
-build_nceplib g2tmpl
-build_nceplib crtm
-build_nceplib nceppost
-build_nceplib wrf_io
-build_nceplib bufr
-build_nceplib wgrib2
-build_nceplib prod_util
-build_nceplib grib_util
+#build_nceplib bacio
+#build_nceplib sigio
+#build_nceplib sfcio
+#build_nceplib gfsio
+#build_nceplib w3nco
+#build_nceplib sp
+#build_nceplib ip
+#build_nceplib ip2
+#build_nceplib landsfcutil
+#build_nceplib nemsio
+#build_nceplib nemsiogfs
+#build_nceplib w3emc
+#build_nceplib g2
+#build_nceplib g2tmpl
+#build_nceplib crtm
+#build_nceplib nceppost
+#build_nceplib wrf_io
+#build_nceplib bufr
+#build_nceplib wgrib2
+#build_nceplib prod_util
+#build_nceplib grib_util
 
 # JEDI 3rd party dependencies
 
-build_lib boost
-build_lib eigen
-build_lib gsl_lite
-build_lib gptl
-build_lib fftw
-build_lib tau2
-build_lib cgal
+#build_lib boost
+#build_lib eigen
+#build_lib gsl_lite
+#build_lib gptl
+#build_lib fftw
+#build_lib tau2
+#build_lib cgal
 
 # JCSDA JEDI dependencies
 
-build_lib ecbuild
-build_lib eckit
-build_lib fckit
-build_lib atlas
+#build_lib ecbuild
+#build_lib eckit
+#build_lib fckit
+#build_lib atlas
 
 # ==============================================================================
 # optionally clean up

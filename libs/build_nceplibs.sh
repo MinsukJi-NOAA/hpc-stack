@@ -123,20 +123,21 @@ else
     eval prefix="\${${nameUpper}_ROOT:-'/usr/local'}"
 fi
 
-if [[ ! -z $mpi ]]; then
-  export FC=$MPI_FC
-  export CC=$MPI_CC
-  export CXX=$MPI_CXX
-else
-  export FC=$SERIAL_FC
-  export CC=$SERIAL_CC
-  export CXX=$SERIAL_CXX
-fi
+#if [[ ! -z $mpi ]]; then
+# export FC=$MPI_FC
+# export CC=$MPI_CC
+# export CXX=$MPI_CXX
+#else
+#  export FC=$SERIAL_FC
+#  export CC=$SERIAL_CC
+#  export CXX=$SERIAL_CXX
+#fi
 
 eval fflags="\${STACK_${name}_FFLAGS:-}"
 eval cflags="\${STACK_${name}_CFLAGS:-}"
 eval cxxflags="\${STACK_${name}_CXXFLAGS:-}"
 
+FC=ftn
 export F9X=$FC
 export FFLAGS="${STACK_FFLAGS:-} $fflags -fPIC -w"
 export CFLAGS="${STACK_CFLAGS:-} $cflags -fPIC -w"

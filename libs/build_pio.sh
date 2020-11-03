@@ -3,7 +3,8 @@
 set -eux
 
 name="pio"
-version=${1:-${STACK_pio_version}}
+#version=${1:-${STACK_pio_version}}
+version="2.5.1"
 
 # Hyphenated version used for install prefix
 compiler=$(echo $HPC_COMPILER | sed 's/\//-/g')
@@ -50,7 +51,7 @@ software=$name-$version
 branch=pio_$(echo $version | sed -e 's/\./_/g')
 [[ -d $software ]] || git clone https://github.com/NCAR/ParallelIO $software
 [[ -d $software ]] && cd $software || ( echo "$software does not exist, ABORT!"; exit 1 )
-git fetch
+#git fetch
 git checkout $branch
 [[ ${DOWNLOAD_ONLY} =~ [yYtT] ]] && exit 0
 [[ -d build ]] && rm -rf build
